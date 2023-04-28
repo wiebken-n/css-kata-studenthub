@@ -1,3 +1,23 @@
-html {
-  background-color: aquamarine;
+.person-svg-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-svg {
+  color: white;
+  background-color: blueviolet;
+  width: 16px;
+  height: 16px;
+}
+.student {
+  display: flex;
+  flex-direction: row;
+}
+
+.student-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
