@@ -6,10 +6,8 @@ html {
   --white: #fbfbfb;
   --grey-font: rgba(0, 0, 0, 0.6);
   --light-violet-font: rgba(75, 20, 138, 0.38);
-  --boxshadow-darkmode: #581f99;
   --burger-hover: #d1bee7;
   --select-color: #a561f3;
-  --background-darkmode: #272727;
   background-color: var(--white);
 }
 
@@ -304,6 +302,8 @@ a:hover {
     --white: #353535;
     --grey-font: rgba(255, 255, 255, 0.925);
     --light-violet-font: rgba(135, 95, 177, 0.911);
+    --background-darkmode: #272727;
+    --boxshadow-darkmode: #581f99;
   }
 
   .site-header {
