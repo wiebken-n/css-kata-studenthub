@@ -74,16 +74,18 @@ main {
 }
 
 .students-heading {
+  font-size: 1.5rem;
   color: var(--violet-dark);
   margin: 0 0 0.2rem 0;
 }
 
 .students-subheading {
+  font-size: 1.2rem;
   color: var(--grey-font);
   margin: 0 0 0 0;
 }
 
-.input {
+.search-input {
   display: flex;
   flex-direction: column;
   margin: 0 0 3rem 0;
@@ -92,17 +94,19 @@ main {
 .textsearch {
   display: flex;
   border: 0.15em solid var(--violet-dark);
+  border-radius: 0.15rem;
   height: 2.2rem;
   margin: 0 0 1rem 0;
 }
 
-.searchfield,
-.searchfield:active {
+.searchfield {
   color: var(--light-violet-font);
   width: 90%;
   height: 1.5rem;
   border-color: transparent;
-  font-size: 1.25rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
   padding-left: 1rem;
   margin-top: 0.1rem;
 }
@@ -122,8 +126,11 @@ main {
 .classmonth,
 .classmodel {
   color: var(--violet-dark);
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 800;
+  font-size: 1rem;
   border: 0.15em solid var(--violet-dark);
+  border-radius: 0.15rem;
   height: 2.5rem;
   padding: 0 1rem 0 1rem;
 }
@@ -154,6 +161,7 @@ main {
 }
 
 .class-id {
+  font-size: 1rem;
   color: var(--grey-font);
 }
 .studentlist {
@@ -164,11 +172,16 @@ main {
 .student {
   display: flex;
   flex-direction: row;
+  height: 6rem;
   border: 0.17rem var(--violet-dark) solid;
-  border-radius: 0.2rem;
+  border-radius: 0.15rem;
   box-shadow: 0.3rem 0.3rem var(--violet-dark);
 }
 
+.class-id {
+  font-size: 1.4rem;
+  margin: 1rem 0 1.5rem 0;
+}
 .person-svg-div {
   display: flex;
   justify-content: center;
@@ -178,27 +191,34 @@ main {
 .person-svg {
   color: var(--white);
   background-color: var(--violet-light);
-  width: 2.5em;
-  height: 2.5em;
+  width: 2.7rem;
+  height: 2.7rem;
   border: 0.5rem solid var(--violet-light);
   border-radius: 10%;
+  margin: 0 0 0 1.5rem;
 }
 
 .student-data {
   font-family: "Source Sans Pro", sans-serif;
-  color: var(--violet-light);
+  color: var(--violet-dark);
   display: flex;
   flex-direction: column;
+  margin-left: 2rem;
 }
 
 .name {
   display: inline-block;
-  margin: 1em 0 0.5em 1em;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 1.3rem 0 0em 1rem;
 }
 
 .github {
   display: inline-block;
-  margin: 0.5em 0 1em 1em;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem 1rem;
+  text-underline-offset: 0.3rem;
 }
 
 .student-data > a {
