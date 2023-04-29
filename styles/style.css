@@ -14,12 +14,28 @@ html {
   color: var(--white);
 }
 
+_@media screen and (prefers-color-scheme: dark) {
+  html {
+    --violet-dark: #ba84f8;
+    --violet-light: #923dfa;
+    --white: #272727;
+    --grey-font: rgba(255, 255, 255, 0.925);
+    --light-violet-font: rgba(135, 95, 177, 0.911);
+  }
+
+  .site-header {
+    --violet-dark: #542d81;
+    --violet-light: #703caa;
+    --white: rgba(255, 255, 255, 0.87);
+  }
+}
+
 .site-header {
   background-color: var(--violet-dark);
 }
 .site-header-div {
   padding-top: 1.5em;
-  color: white;
+  color: var(--white);
   min-width: min-content;
   display: flex;
   align-items: center;
@@ -85,6 +101,10 @@ main {
   margin: 0 0 0 0;
 }
 
+input,
+select {
+  background-color: var(--white);
+}
 .search-input {
   display: flex;
   flex-direction: column;
@@ -128,7 +148,7 @@ main {
   color: var(--violet-dark);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 800;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border: 0.15em solid var(--violet-dark);
   border-radius: 0.15rem;
   height: 2.5rem;
