@@ -14,7 +14,7 @@ html {
   color: var(--white);
 }
 
-_@media screen and (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   html {
     --violet-dark: #ba84f8;
     --violet-light: #923dfa;
