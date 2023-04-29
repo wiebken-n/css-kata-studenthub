@@ -6,28 +6,16 @@ html {
   --white: #fbfbfb;
   --grey-font: rgba(0, 0, 0, 0.6);
   --light-violet-font: rgba(75, 20, 138, 0.38);
+  --boxshadow-darkmode: #581f99;
+  --burger-hover: #d1bee7;
+  --select-color: #a561f3;
+  --background-darkmode: #272727;
   background-color: var(--white);
 }
 
 ::selection {
-  background-color: var(--light-violet-font);
+  background-color: var(--select-color);
   color: var(--white);
-}
-
-@media screen and (prefers-color-scheme: dark) {
-  html {
-    --violet-dark: #ba84f8;
-    --violet-light: #923dfa;
-    --white: #272727;
-    --grey-font: rgba(255, 255, 255, 0.925);
-    --light-violet-font: rgba(135, 95, 177, 0.911);
-  }
-
-  .site-header {
-    --violet-dark: #542d81;
-    --violet-light: #703caa;
-    --white: rgba(255, 255, 255, 0.87);
-  }
 }
 
 .site-header {
@@ -39,7 +27,7 @@ html {
   margin: auto;
 }
 .site-header-div {
-  padding-top: 1.5em;
+  padding-top: 1.5rem;
   color: var(--white);
   min-width: max-content;
   max-width: 80%;
@@ -50,17 +38,24 @@ html {
 }
 
 .burger {
-  width: 4em;
-  margin-top: 0.2em;
-  margin-right: 1em;
+  width: 4rem;
+  margin-top: 0.2rem;
+  margin-right: 0.8rem;
 }
+
 .burger-svg {
-  width: 3em;
-  height: 4em;
+  width: 4rem;
+  height: 4rem;
   margin: auto;
+  transition: 100ms ease;
+}
+
+.burger-svg:hover {
+  color: var(--burger-hover);
 }
 .site-heading {
-  font-size: 1.4em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .svg-arrow {
   color: var(--violet-dark);
@@ -97,6 +92,7 @@ main {
 }
 
 .students-heading {
+  text-transform: uppercase;
   font-size: 1.7rem;
   color: var(--violet-dark);
   margin: 0 0 0.25rem 0;
@@ -120,7 +116,7 @@ select {
 
 .textsearch {
   display: flex;
-  border: 0.15em solid var(--violet-dark);
+  border: 0.15rem solid var(--violet-dark);
   border-radius: 0.15rem;
   height: 2.2rem;
   margin: 0 0 1rem 0;
@@ -128,21 +124,23 @@ select {
 
 .searchfield {
   color: var(--light-violet-font);
-  width: 90%;
+  width: 88%;
   height: 1.5rem;
   border-color: transparent;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   padding-left: 1rem;
-  margin-top: 0.1rem;
+  margin: 0.15rem 0 0 0.2rem;
+  outline: 1;
+  outline-color: var(--light-violet-font);
 }
 
 .magnify {
   color: var(--violet-dark);
   width: 1.2rem;
   height: 1.2rem;
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 .dropdown {
   display: flex;
@@ -150,33 +148,74 @@ select {
   gap: 2rem;
 }
 
+.classmonth-wrapper,
+.classmodel-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.classmonth-wrapper {
+  width: 53%;
+}
+.classmodel-wrapper {
+  width: 40%;
+}
 .classmonth,
 .classmodel {
   color: var(--violet-dark);
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 800;
   font-size: 1.1rem;
-  border: 0.15em solid var(--violet-dark);
+  border: 0.15rem solid var(--violet-dark);
   border-radius: 0.15rem;
   height: 2.5rem;
-  padding: 0 1rem 0 1rem;
+  width: 100%;
+  padding: 0.1rem 1rem 0 1rem;
+  outline: 1;
+  outline-color: var(--light-violet-font);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select option {
+  background-color: var(--white);
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 500;
+}
+
+select option:checked {
+  background-color: var(--light-violet-font);
+  color: var(--violet-dark);
+}
+
+.chevron-down {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  color: var(--white);
+}
+
+.chevron-month {
+  translate: 15.1rem 0.8rem;
+}
+.chevron-model {
+  translate: 11.1rem 0.8rem;
 }
 
 .classmonth {
-  width: 53%;
   background-image: linear-gradient(
     90deg,
-    transparent 88%,
-    var(--violet-light) 88%
+    transparent 85.5%,
+    var(--violet-light) 85.5%
   );
 }
 
 .classmodel {
-  width: 40%;
   background-image: linear-gradient(
     90deg,
-    transparent 85%,
-    var(--violet-light) 85%
+    transparent 81.5%,
+    var(--violet-light) 81.5%
   );
 }
 
@@ -237,7 +276,7 @@ select {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 900;
-  margin: 1.3rem 0 0em 1rem;
+  margin: 1.3rem 0 0 1rem;
 }
 
 .github {
@@ -250,4 +289,39 @@ select {
 
 .student-data > a {
   color: var(--violet-dark);
+  transition: 100ms ease;
+}
+
+a:hover {
+  color: var(--violet-light);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    --violet-dark: #ba84f8;
+    --violet-light: #923dfa;
+    --white: #272727;
+    --white: #353535;
+    --grey-font: rgba(255, 255, 255, 0.925);
+    --light-violet-font: rgba(135, 95, 177, 0.911);
+  }
+
+  .site-header {
+    --violet-dark: #542d81;
+    --violet-light: #703caa;
+    --white: rgba(255, 255, 255, 0.87);
+  }
+
+  .student {
+    box-shadow: 0.3rem 0.3rem var(--boxshadow-darkmode);
+    background-color: var(--background-darkmode);
+  }
+
+  .textsearch,
+  .searchfield,
+  .classmonth,
+  .classmodel,
+  select option {
+    background-color: var(--background-darkmode);
+  }
 }
