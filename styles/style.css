@@ -1,20 +1,52 @@
 html {
   font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  --violet-dark: #6a1cc3;
+  --violet-light: #8849cf;
+  --white: #fbfbfb;
+  --grey-font: rgba(0, 0, 0, 0.6);
+  --light-violet-font: rgba(75, 20, 138, 0.38);
+  background-color: var(--white);
+}
+
+::selection {
+  background-color: var(--light-violet-font);
+  color: var(--white);
+}
+
+.site-header {
+  background-color: var(--violet-dark);
 }
 .site-header-div {
+  padding-top: 1.5em;
+  color: white;
+  min-width: min-content;
   display: flex;
-  background-color: #6a1cc3;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  width: 4em;
+  margin-top: 0.2em;
+  margin-right: 1em;
+}
+.burger-svg {
+  width: 3em;
+  height: 4em;
+  margin: auto;
+}
+.site-heading {
+  font-size: 1.4em;
 }
 .svg-arrow {
-  color: #6a1cc3;
+  color: var(--violet-dark);
   position: absolute;
-  _filter: drop-shadow(3px 5px 2px #8849cf);
 }
 
 .svg-arrow-1 {
-  color: #8849cf;
+  color: var(--violet-light);
   position: absolute;
-  _filter: drop-shadow(3px 5px 2px #8849cf);
 }
 
 main {
@@ -24,22 +56,94 @@ main {
   padding: 3rem 0;
 }
 
-.person-svg-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main-content {
+  width: 80%;
+  margin: auto;
 }
 
-.person-svg {
-  color: white;
-  background-color: blueviolet;
-  width: 16px;
-  height: 16px;
+.main-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 2rem 0 1.5rem 0;
+}
+
+.students-heading,
+.students-subheading {
+  font-weight: 900;
+}
+
+.students-heading {
+  color: var(--violet-dark);
+  margin: 0 0 0.2rem 0;
+}
+
+.students-subheading {
+  color: var(--grey-font);
+  margin: 0 0 0 0;
 }
 
 .input {
   display: flex;
   flex-direction: column;
+  margin: 0 0 3rem 0;
+}
+
+.textsearch {
+  display: flex;
+  border: 0.15em solid var(--violet-dark);
+  height: 2.2rem;
+  margin: 0 0 1rem 0;
+}
+
+.searchfield,
+.searchfield:active {
+  color: var(--light-violet-font);
+  width: 90%;
+  height: 1.5rem;
+  border-color: transparent;
+  font-size: 1.25rem;
+  padding-left: 1rem;
+  margin-top: 0.1rem;
+}
+
+.magnify {
+  color: var(--violet-dark);
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+}
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.classmonth,
+.classmodel {
+  color: var(--violet-dark);
+  font-weight: 800;
+  border: 0.15em solid var(--violet-dark);
+  height: 2.5rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.classmonth {
+  width: 53%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 88%,
+    var(--violet-light) 88%
+  );
+}
+
+.classmodel {
+  width: 40%;
+  background-image: linear-gradient(
+    90deg,
+    transparent 85%,
+    var(--violet-light) 85%
+  );
 }
 
 .output {
@@ -48,20 +152,55 @@ main {
   min-width: min-content;
   max-width: 600px;
 }
+
+.class-id {
+  color: var(--grey-font);
+}
 .studentlist {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .student {
   display: flex;
   flex-direction: row;
-  border: 2px black solid;
+  border: 0.17rem var(--violet-dark) solid;
+  border-radius: 0.2rem;
+  box-shadow: 0.3rem 0.3rem var(--violet-dark);
 }
 
-.student-div {
+.person-svg-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-svg {
+  color: var(--white);
+  background-color: var(--violet-light);
+  width: 2.5em;
+  height: 2.5em;
+  border: 0.5rem solid var(--violet-light);
+  border-radius: 10%;
+}
+
+.student-data {
+  font-family: "Source Sans Pro", sans-serif;
+  color: var(--violet-light);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+}
+
+.name {
+  display: inline-block;
+  margin: 1em 0 0.5em 1em;
+}
+
+.github {
+  display: inline-block;
+  margin: 0.5em 0 1em 1em;
+}
+
+.student-data > a {
+  color: var(--violet-dark);
 }
