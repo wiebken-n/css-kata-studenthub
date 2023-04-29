@@ -33,13 +33,20 @@ _@media screen and (prefers-color-scheme: dark) {
 .site-header {
   background-color: var(--violet-dark);
 }
+
+.header-container {
+  max-width: 600px;
+  margin: auto;
+}
 .site-header-div {
   padding-top: 1.5em;
   color: var(--white);
-  min-width: min-content;
+  min-width: max-content;
+  max-width: 80%;
   display: flex;
+  margin: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .burger {
@@ -90,9 +97,9 @@ main {
 }
 
 .students-heading {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--violet-dark);
-  margin: 0 0 0.2rem 0;
+  margin: 0 0 0.25rem 0;
 }
 
 .students-subheading {
