@@ -197,10 +197,10 @@ select option:checked {
 }
 
 .chevron-month {
-  transform: translate(15.5rem, 0.8rem);
+  transform: translate(15.6rem, 0.8rem);
 }
 .chevron-model {
-  transform: translate(11.42rem, 0.8rem);
+  transform: translate(11.38rem, 0.8rem);
 }
 
 .classmonth {
@@ -214,8 +214,8 @@ select option:checked {
 .classmodel {
   background-image: linear-gradient(
     90deg,
-    transparent 80.25%,
-    var(--violet-light) 80.25%
+    transparent 80.15%,
+    var(--violet-light) 80.15%
   );
 }
 
@@ -257,8 +257,8 @@ select option:checked {
 .person-svg {
   color: var(--white);
   background-color: var(--violet-light);
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2rem;
+  height: 2rem;
   border: 0.5rem solid var(--violet-light);
   border-radius: 10%;
   margin: 0 0 0 1.5rem;
@@ -296,6 +296,8 @@ a:hover {
   color: var(--violet-light);
 }
 
+/* Media queries */
+
 @media screen and (prefers-color-scheme: dark) {
   html {
     --violet-dark: #ba84f8;
@@ -327,6 +329,35 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+    --content-width: 300px;
+  }
+
+  .classmonth {
+    background-image: linear-gradient(
+      90deg,
+      transparent 82.3%,
+      var(--violet-light) 82.3%
+    );
+  }
+
+  .classmodel {
+    background-image: linear-gradient(
+      90deg,
+      transparent 77%,
+      var(--violet-light) 77%
+    );
+  }
+  .chevron-month {
+    transform: translate(11.35rem, 0.8rem);
+  }
+  .chevron-model {
+    transform: translate(8.25rem, 0.8rem);
+  }
+}
+
 @media screen and (min-width: 786px) {
   html {
     font-size: 14px;
@@ -344,16 +375,16 @@ a:hover {
   .classmodel {
     background-image: linear-gradient(
       90deg,
-      transparent 80.8%,
-      var(--violet-light) 80.8%
+      transparent 80.85%,
+      var(--violet-light) 80.85%
     );
   }
 
   .chevron-month {
-    transform: translate(16.8rem, 0.8rem);
+    transform: translate(16.9rem, 0.8rem);
   }
   .chevron-model {
-    transform: translate(12.2rem, 0.8rem);
+    transform: translate(12.3rem, 0.8rem);
   }
 }
 
@@ -383,6 +414,6 @@ a:hover {
     transform: translate(19rem, 0.8rem);
   }
   .chevron-model {
-    transform: translate(13.8rem, 0.8rem);
+    transform: translate(13.85rem, 0.8rem);
   }
 }
