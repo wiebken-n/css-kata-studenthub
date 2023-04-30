@@ -1,5 +1,5 @@
 html {
-  font-size: 15px;
+  font-size: 13px;
   font-family: "Montserrat", sans-serif;
   --violet-dark: #6a1cc3;
   --violet-light: #8849cf;
@@ -9,6 +9,7 @@ html {
   --burger-hover: #d1bee7;
   --select-color: #a561f3;
   background-color: var(--white);
+  --content-width: 430px;
 }
 
 ::selection {
@@ -28,7 +29,7 @@ html {
   padding-top: 1.5rem;
   color: var(--white);
   min-width: max-content;
-  max-width: 80%;
+  max-width: var(--content-width);
   display: flex;
   margin: auto;
   align-items: center;
@@ -38,7 +39,7 @@ html {
 .burger {
   width: 4rem;
   margin-top: 0.2rem;
-  margin-right: 0.8rem;
+  margin-right: 1rem;
 }
 
 .burger-svg {
@@ -73,7 +74,7 @@ main {
 }
 
 .main-content {
-  width: 80%;
+  width: var(--content-width);
   margin: auto;
 }
 
@@ -125,6 +126,7 @@ select {
   width: 88%;
   height: 1.5rem;
   border-color: transparent;
+  background-color: transparent;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
@@ -195,25 +197,25 @@ select option:checked {
 }
 
 .chevron-month {
-  translate: 15.1rem 0.8rem;
+  transform: translate(15.5rem, 0.8rem);
 }
 .chevron-model {
-  translate: 11.1rem 0.8rem;
+  transform: translate(11.42rem, 0.8rem);
 }
 
 .classmonth {
   background-image: linear-gradient(
     90deg,
-    transparent 85.5%,
-    var(--violet-light) 85.5%
+    transparent 84.25%,
+    var(--violet-light) 84.25%
   );
 }
 
 .classmodel {
   background-image: linear-gradient(
     90deg,
-    transparent 81.5%,
-    var(--violet-light) 81.5%
+    transparent 80.25%,
+    var(--violet-light) 80.25%
   );
 }
 
@@ -318,10 +320,69 @@ a:hover {
   }
 
   .textsearch,
-  .searchfield,
   .classmonth,
   .classmodel,
   select option {
     background-color: var(--background-darkmode);
+  }
+}
+
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 14px;
+    --content-width: 500px;
+  }
+
+  .classmonth {
+    background-image: linear-gradient(
+      90deg,
+      transparent 84.9%,
+      var(--violet-light) 84.9%
+    );
+  }
+
+  .classmodel {
+    background-image: linear-gradient(
+      90deg,
+      transparent 80.8%,
+      var(--violet-light) 80.8%
+    );
+  }
+
+  .chevron-month {
+    transform: translate(16.8rem, 0.8rem);
+  }
+  .chevron-model {
+    transform: translate(12.2rem, 0.8rem);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 15px;
+    --content-width: 600px;
+  }
+
+  .classmonth {
+    background-image: linear-gradient(
+      90deg,
+      transparent 84.6%,
+      var(--violet-light) 84.6%
+    );
+  }
+
+  .classmodel {
+    background-image: linear-gradient(
+      90deg,
+      transparent 80.5%,
+      var(--violet-light) 80.5%
+    );
+  }
+
+  .chevron-month {
+    transform: translate(19rem, 0.8rem);
+  }
+  .chevron-model {
+    transform: translate(13.8rem, 0.8rem);
   }
 }
